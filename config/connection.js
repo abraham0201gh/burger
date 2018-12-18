@@ -11,11 +11,10 @@ if(process.env.JAWSDB_URL){
 } else {
 //Set up the connection information
 connection = mysql.createConnection({
-    port: 3306,
     host: "localhost",
     user: "root",
-    password: "3edc#EDC",
-    database: "burgers_db"
+    password: "hacktheplanet",
+    database: "todoagain_db"
 });
 }
 
