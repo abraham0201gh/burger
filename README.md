@@ -11,7 +11,7 @@ is designed to be deployed (hosted) on Heroku (database).
 
 * Whenever a user submits a burger's name, the app displays the burger on the left side of the page -- waiting to be devoured.
 
-* Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger moves to the right side of the page.
+* Each burger in the waiting area also has a 'Devour it!' button. When the user clicks it, the burger moves to the right side of the page.
 
 * The app stores every burger in a database, whether devoured or not.
 
@@ -21,21 +21,27 @@ is designed to be deployed (hosted) on Heroku (database).
 ├── config
 │   ├── connection.js
 │   └── orm.js
+
 │ 
 ├── controllers
 │   └── burgers_controller.js
+
 │
 |
 ├── db
 │   ├── schema.sql
 │   └── seeds.sql
+
 │
 ├── models
 │   └── burger.js
+
 │ 
 ├── node_modules
+
 │ 
 ├── package.json
+
 │
 ├── public
 │   └── assets
@@ -43,9 +49,11 @@ is designed to be deployed (hosted) on Heroku (database).
 │       │   └── burger_style.css
 │       └── img
 │           └── burger.png
+
 │   
 │
 ├── server.js
+
 │
 └── views
     ├── index.handlebars 
