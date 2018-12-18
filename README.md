@@ -1,11 +1,11 @@
-### Overview 
+## Overview 
 
 This app consists of creating a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.  The MVC (Model-View-Controller) 
 design pattern was followed, usig Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.  The app is
 is designed to be deployed (hosted) on Heroku (database). 
 
 
-## About the App
+### About the App
 
 * Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
@@ -16,7 +16,7 @@ is designed to be deployed (hosted) on Heroku (database).
 * The app stores every burger in a database, whether devoured or not.
 
 
-## Directory structure
+### Directory structure
 
 ├── config
 │   ├── connection.js
@@ -48,7 +48,7 @@ is designed to be deployed (hosted) on Heroku (database).
 ├── server.js
 │
 └── views
-    ├── index.handlebars
+    ├── index.handlebars 
     └── layouts
         └── main.handlebars
 
