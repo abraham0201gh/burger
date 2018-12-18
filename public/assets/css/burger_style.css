@@ -1,0 +1,262 @@
+
+body {
+  background-color:#ffb039;
+}
+
+img {
+  width: 12%;
+  max-height: 24%;
+  display: block;
+  margin: auto;
+  margin-top: 32px;
+}
+
+h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.center-top-div {
+  width: 80%;
+  margin: auto;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.alreadyDevour {
+  font-size: 12px;
+}
+
+#btnStyleEat {
+  width: 225px;
+  height: 35px;
+  margin-right: 15px;
+}
+
+#btnStyleDevoured {
+  width: 225px;
+  height: 35px;
+  padding-left: 0px;
+}
+
+.center-left-div {
+  float: left;
+  width: 36%;
+  margin-left: 17%;
+  margin-right: 0%;
+}
+
+.center-right-div {
+  float: right;
+  width: 47%;
+  margin-bottom: 5px;
+}
+
+#clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.center-bottom-div {
+  display: block;
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 40%;
+  clear: left;
+}
+
+.textArea {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  width: 60%;
+  font-size: 20px;
+}
+
+#submitButton {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  width: 20%;
+  height: 30px;
+  background-color: #3333cc;
+  color:white; 
+}
+
+.textInstructions {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  font-size: 16px; 
+}
+
+@media only screen and (max-width: 990px) {
+  #btnStyleEat {
+    width: 120px;
+    height: 35px;
+    margin-right: 15px;
+  }
+
+  #btnStyleDevoured {
+    width: 120px;
+    height: 35px;
+    padding-left: 0px;
+  }
+
+  .center-left-div {
+    float: left;
+    width: 45%;
+    margin-left: 14%;
+    margin-right: 0%;
+  }
+
+  .center-right-div {
+    float: right;
+    width: 41%;
+    margin-right: 0px;
+    margin-bottom: 1px;
+  }
+
+  .textArea {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    width: 100%;
+    font-size: 12x;
+  }
+
+  #submitButton {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: auto;
+    width: auto;
+    height: auto;
+    background-color: #3333cc;
+    color:white; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  img {
+    width: 17%;
+    max-height: 34%;
+    display: block;
+    margin: auto;
+    margin-top: 32px;
+  }
+
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #btnStyleEat {
+    width: 120px;
+    height: 35px;
+    margin-right: 15px;
+  }
+
+  #btnStyleDevoured {
+    width: 120px;
+    height: 35px;
+    padding-left: 0px;
+  }
+
+  .center-left-div {
+    float: left;
+    width: 45%;
+    margin-left: 1%;
+    margin-right: 0%;
+  }
+
+  .center-right-div {
+    float: right;
+    width: 41%;
+    margin-right: 0px;
+    margin-bottom: 1px;
+  }
+
+  .textArea {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    width: 100%;
+    font-size: 12x;
+  }
+
+  #submitButton {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: auto;
+    width: auto;
+    height: auto;
+    background-color: #3333cc;
+    color:white; 
+  }
+}  
+
+@media only screen and (max-width: 680px) {
+  img {
+    width: 17%;
+    max-height: 34%;
+    display: block;
+    margin: auto;
+    margin-top: 32px;
+  }
+  
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #btnStyleEat {
+    width: 120px;
+    height: 35px;
+    margin-right: 15px;
+  }
+  
+  #btnStyleDevoured {
+    width: 120px;
+    height: 35px;
+    padding-left: 0px;
+  }
+  
+  .center-left-div {
+    float: left;
+    width: 45%;
+    margin-left: 1%;
+    margin-right: 0%;
+  }
+  
+  .center-right-div {
+    float: right;
+    width: 41%;
+    margin-right: 0px;
+    margin-bottom: 1px;
+  }
+
+  .textArea {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    width: 100%;
+    font-size: 12x;
+  }
+  
+  #submitButton {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: auto;
+    width: auto;
+    height: auto;
+    background-color: #3333cc;
+    color:white; 
+  }
+}

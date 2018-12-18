@@ -1,0 +1,104 @@
+
+<div>
+
+    <div class="top-div">
+        <img id="image" src="/assets/img/burger.jpg" alt="Burger photo"></img>
+        <h1 style="text-align:center">Eat-Da-Burger!</h1>
+    </div>
+
+    <div class="center-top-div">
+
+        <!--To eat list. Move to devour side.-->
+        <div class="center-left-div">    
+            {{#each burgers}} 
+            {{#unless this.devoured}} 
+            <ul>
+                <P>
+                <button type="text" id="btnStyleEat">{{this.id}}. {{this.burger_name}}</button>
+                <!--<form action="/" method="PUT">-->
+                <button data-burgerId="{{this.id}}" class="alreadyDevour">DEVOUR IT!</button>                  
+                {{/unless}}    
+            </ul>
+            {{/each}}  
+        </div>    
+
+        <!--Devoured list-->
+        <div class="center-right-div">
+            {{#each burgers}}
+            {{#if this.devoured}}
+            <ul>
+                <p>
+                <button type="text" id="btnStyleDevoured">{{this.id}}. {{this.burger_name}}</button>           
+            </ul>
+            {{/if}}
+            {{/each}}
+            <br id="clearfix"/>
+        </div>
+    </div>
+
+    <!--Add a burger to devour list.-->
+    <form id="addBurger" action="/" method="POST">
+        <div class="center-bottom-div">
+            <textarea type="text" name="burgerName" class="textArea" textarea rows="2" cols="40"></textarea>
+            <button type="submit" name="nameName" id="submitButton">Submit</button>
+            <br>
+        </div>     
+        <div class="bottom-div">
+            <h4 class="textInstructions">Enter a Burger you want to eat.  Then Click the "Submit" button.</h4>
+        </div>      
+    </form>
+
+</div>
+
+
+<script type="text/javascript">
+
+  //Creating new burgers to devour
+  $("#addBurger").on("submit", function(event) {
+    // Make sure to preventDefault on submit event.
+    event.preventDefault();
+
+    // [name=burgerName] will find an element with a "name" attribute equal to the string "burgerName"
+    var newBurger = {
+      burger_name: $("#addBurger [name=burgerName]").val().trim(),  
+    };
+
+    // Send the POST request to add a new burger.
+    $.ajax("/api/burgers", {
+      type: "POST",
+      data: newBurger,
+      devoured: 0
+    }).then(
+      function() {
+        //console.log("created new burger");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+    //Move burgers to devoured side
+    $(".alreadyDevour").on("click", function(event) {
+    // Make sure to preventDefault on submit event.
+    event.preventDefault();
+
+    var id = $(this).attr("data-burgerId");
+
+    var updatedBurger = {
+      devoured: true
+    };
+
+    // Send the PUT request.
+    $.ajax("/api/burgers/" + id, {
+      type: "PUT",
+      data: updatedBurger
+    }).then(
+      function() {
+      // console.log("updated id ", id);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  }); 
+
+</script>
